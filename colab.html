@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tutorials</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="colab_style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <!-- Begin Jekyll SEO tag v2.6.1 -->
+        <title>getting_started_with_colab</title>
+        <meta name="generator" content="Jekyll v3.8.7" />
+        <meta property="og:title" content="getting_started_with_colab" />
+        <meta property="og:locale" content="en_US" />
+        <link rel="canonical" href="https://kakoozajerry.github.io/getting_started_with_colab/" />
+        <meta property="og:url" content="https://kakoozajerry.github.io/getting_started_with_colab/" />
+        <meta property="og:site_name" content="getting_started_with_colab" />
+        <script type="application/ld+json">
+        {"@type":"WebSite","headline":"getting_started_with_colab","url":"https://kakoozajerry.github.io/getting_started_with_colab/","name":"getting_started_with_colab","@context":"https://schema.org"}</script>
+        <!-- End Jekyll SEO tag -->
+    </head>
+    <body>
+        <!-- NAVIGATION  -->
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: #e3f2fd">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="images/netlabs.png" width="170px" height="49px"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="tutorials.html">Tutorials</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="leadership.html">Leadership</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="events.html">Events</a>
+                      </li>
+                  </ul>
+              </div>
+
+          </div>
+        </nav>
+
+
+        <div class="container-fluid padding">
+            <div class="row welcome text-center">
+                <div class="col-12">
+                    <h1 class="display-4">Getting started with Colab</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jumbotron -->
+        <div class="container-fluic">
+            <div class="jumbotron">
+                <div class="container-lg px-3 my-5 markdown-body">
+                    <p><strong><a href="https://colab.research.google.com">Colab</a></strong> is a free notebook environment that runs entirely in the cloud. You and team members can edit documents the way you work with <a href="https://docs.google.com">Google docs</a>. It supports many popular Machine Learning(<strong>ML</strong>) libraries such as Keras,Tensorflow,Pytorch etc.</p>
+
+                    <h2 id="why-colab">Why Colab?</h2>
+                    <p>It allows one to write and execute Python in a browser with:</p>
+                    <ul>
+                      <li>Zero configuration required</li>
+                      <li>Free access to GPUs</li>
+                      <li>Easy sharing</li>
+                    </ul>
+
+                    <p>One can leverage <strong>free Graphics Processing Units</strong>(GPUs) for machine, scientific computing and 3D visualizations. Scientists, Artists and Engineers need access to massively parallel computational power. Deep learning, physical simulation or molecular modelling are accelerated with several <strong>GPU</strong> types such as NVIDIA Tesla K80, P100, P4, T4 and V100 available depending on compute or visualization needs.</p>
+
+                    <h1 id="table-of-contents">Table of Contents</h1>
+
+                    <ul>
+                      <li><a href="#basic-python-operations-in-notebooks">Basic Python Operations in Notebooks</a>
+                        <ul>
+                          <li><a href="#my-first-notebook">Print My First Notebook</a>
+                            <ul>
+                              <li><a href="#uploading-data-to-your-colab-environment-from-your-local-machine">Uploading data to your Colab environment from your local machine</a></li>
+                              <li><a href="#downloading-datasets-into-google-drive-via-google-colab">Downloading Datasets into Google Drive via Google Colab</a></li>
+                              <li><a href="#saving-your-notebook-to-google-drive">Saving your notebook to Google drive</a></li>
+                              <li><a href="#saving-your-notebook-to-github">Saving your notebook to Github</a></li>
+                              <li><a href="#enabling-gpu">Enabling GPU</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#variables-and-arithmetic">Variables &amp; Arithmetic</a></li>
+                          <li><a href="#functions">Functions</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#machine-learning-intro">Machine Learning Intro</a>
+                        <ul>
+                          <li><a href="#model-fitting">Model Fitting</a></li>
+                          <li><a href="#prediction">Prediction</a></li>
+                          <li><a href="">Cross-Validation</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#how-to-run-a-job-with-gpu">How to run a job with GPU</a>
+                        <ul>
+                          <li><a href="#import-packages">Import Packages</a></li>
+                          <li><a href="#load-data">Load Data</a></li>
+                          <li><a href="#understanding-the-data">Understanding the Data</a></li>
+                          <li><a href="#data-preparation">Data preparation</a></li>
+                          <li><a href="#visualize-training-images">Visualize training images</a></li>
+                          <li><a href="#create-the-model">Create the model</a></li>
+                          <li><a href="#compile-the-model">Compile the model</a></li>
+                          <li><a href="#model-summary">Model summary</a></li>
+                          <li><a href="#train-the-model">Train the model</a></li>
+                          <li><a href="#visualize-training-results">Visualize training results</a></li>
+                          <li><a href="#overfitting">Overfitting</a></li>
+                          <li><a href="#data-augmentation">Data augmentation</a></li>
+                          <li><a href="#augment-and-visualize-data">Augment and visualize Data</a>
+                            <ul>
+                              <li><a href="#apply-horizontal-flip">Apply Horizontal Flip</a></li>
+                              <li><a href="#randomly-rotate-the-image">Randomly rotate the image</a></li>
+                              <li><a href="#apply-zoom-augmentation">Apply Zoom Augmentation</a></li>
+                              <li><a href="#putting-it-all-together">Putting it all together</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#dropout">Dropout</a>
+                            <ul>
+                              <li><a href="#creating-a-new-network-with-dropouts">Creating a new network with Dropouts</a></li>
+                              <li><a href="#compile-the-model-1">Compile the model</a></li>
+                              <li><a href="#train-the-model-1">Train the model</a></li>
+                              <li><a href="#visualize-the-model">Visualize the model</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <hr />
+                    <h2 id="basic-python-operations-in-notebooks">Basic Python Operations in Notebooks</h2>
+                    <h3 id="my-first-notebook">My First Notebook</h3>
+
+                    <p>You will need a Gmail account as Colab implicitly uses Google Drive for storing your notebooks, ensure that you are logged in to your Google Drive account before proceeding further.</p>
+
+                    <p>Step 1 – Open this URL in your browser.<a href="https://colab.research.google.com">https://colab.research.google.com</a> It will display the following Screen.</p>
+
+                    <p><img src="colab_images/1.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Step 2 – Click on the New Notebook link at the bottom of the screen. A new notebook appears.</p>
+
+                    <p><img src="colab_images/2.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>If you are familiar with Jupyter notebooks, the interface looks more or less the same. You have an input cell and an output cell. Above we have the input Cell.</p>
+
+                    <p>By default, the name of your notebook is labelled Untitled0 for the first notebook , this can be changed for easier tracking of your projects.</p>
+
+                    <p>Step – 3 To rename your notebook, click on the file tab , then click rename .</p>
+
+                    <p><img src="colab_images/3.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Change your name to MyFirstNotebook as shown below.</p>
+
+                    <p><img src="colab_images/4.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Step – 4 Connect to a runtime server by clicking the connect button as shown below</p>
+
+                    <p><img src="colab_images/5.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>It will connect to a specified runtime and show the screen below.</p>
+
+                    <p><img src="colab_images/6.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Step 5- You can now type your code in the cell shown .Type</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="err">“</span><span class="n">Welcome</span> <span class="n">to</span> <span class="n">your</span> <span class="n">first</span> <span class="n">notebook</span><span class="err">”</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <p><img src="colab_images/7.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Step 6- To run the cell, you can either use Shift+Enter keys or click Runtime&gt;Run the Focused Cell</p>
+
+                    <p><img src="colab_images/8.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Step 7- Click on +Code tab above to create a code cell.</p>
+
+                    <p>Congratulations🎉, you just created a google Colab notebook. Navigate  to the extreme left pane and click on the three lines . Below is the screen that will show.Here you can navigate your notebook easily to various parts of it such as sections.</p>
+
+                    <p><img src="colab_images/9.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Also click on &lt;&gt; button  to view code snippets that can easily be searched and used directly in your colab notebook.</p>
+
+                    <p><img src="colab_images/10.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p><img src="colab_images/11.png" alt="Test Image" title="Test Title" /></p>
+
+                    <h4 id="uploading-data-to-your-colab-environment-from-your-local-machine">Uploading data to your Colab environment from your local machine.</h4>
+                    <p>By default , there is  a sample data folder created in your environment variable that you can expand and when you click on an individual file, a third side pane appears on the extreme right . This can also be used as a text editor to manipulate the text in that file .</p>
+
+                    <p><img src="colab_images/sidepane.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Click on the Folder icon at the left pane , then the Upload button. Below is the window that pops up.</p>
+
+                    <p><img src="colab_images/12.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Select the files you wish to upload and click Open.</p>
+
+                    <h4 id="downloading-datasets-into-google-drive-via-google-colab">Downloading Datasets into Google Drive via Google Colab</h4>
+
+                    <p>First, we will have to mount our google drive to our notebook environment. This is by clicking the folder icon at the extreme left pane and then the mount Drive button at the top .You will have to authorize the right gmail account ,so the screen below is shown.</p>
+
+                    <p><img src="colab_images/13.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Click on connect to google Drive button and the drive folder is created in your working directory structure so you can either move data to your Google drive or export it from there into your runtime environment.</p>
+
+                    <p><img src="colab_images/14.png" alt="Test Image" title="Test Title" /></p>
+
+                    <h4 id="saving-your-notebook-to-google-drive">Saving your notebook to Google drive</h4>
+
+                    <p>In order to do this, you will have to click on File&gt;Save a Copy in Drive and follow the prompts.</p>
+
+                    <h4 id="saving-your-notebook-to-github">Saving your notebook to Github</h4>
+
+                    <p>First, you will have to click on File&gt;Save a Copy in Github.Incase it is the first time , you are prompted with an authorization window  shown below.</p>
+
+                    <p><img src="colab_images/15.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Edit the public repository you wish to save your notebook in or automatically Colab creates a public repo named your file title. You can also change the commit message as shown below.</p>
+
+                    <p><img src="colab_images/16.png" alt="Test Image" title="Test Title" /></p>
+
+                    <hr />
+
+                    <h3 id="getting-started-with-running-a-gpu-job-on-google-colab">Getting started with running a GPU job on Google Colab.</h3>
+
+                    <h3 id="enabling-gpu">Enabling GPU</h3>
+
+                    <p>To successfully run a GPU job, you need to change your runtime type by clicking Runtime&gt;Change runtime type. The window below shows.</p>
+
+                    <p><img src="colab_images/17.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Select the drop down at the Hardware accelerator then choose GPU.</p>
+
+                    <p><img src="colab_images/18.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Click the save button and you should be able to read the words Connected to a Python 3 GPU after hoovering over the RAM Disk button above as shown below</p>
+
+                    <p><img src="colab_images/19.png" alt="Test Image" title="Test Title" /></p>
+
+                    <p>By default, Colab gives you about 12GB of ram and 68 GB of storage. The RAM can be upgraded to 25GB or more if you run a program that utilizes all of it up.</p>
+
+                    <p>You can run your code in the cells as shown above to kick start your project.</p>
+
+                    <p><strong>NB:</strong> Incase you are doing a  computational intensive program, it is advisable to always first change your runtime to GPU before you start typing your code. Also you can always double ckeck to see if you are connected to a GPU by running the command.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+                    <span class="n">tf</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">gpu_device_name</span><span class="p">()</span>
+                    </code></pre></div></div>
+
+                    <p>If the GPU is enabled, it will give the following output below</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">/</span><span class="n">device</span><span class="p">:</span><span class="n">GPU</span><span class="p">:</span><span class="mi">0</span>
+                    </code></pre></div></div>
+
+                    <h3 id="variables-and-arithmetic">Variables and Arithmetic</h3>
+
+                    <p>Within a new input cell, type a variable named seconds and give it a value of 3600 as shown below</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">seconds</span> <span class="o">=</span> <span class="mi">3600</span>
+                    </code></pre></div></div>
+                    <p>You run the above cell and calculate the minutes in the above seconds using the function below</p>
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">minutes</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">//</span> <span class="mi">60</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">"There are "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">minutes</span><span class="p">)</span> <span class="o">+</span> <span class="s">" minutes are in "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span> <span class="o">+</span> <span class="s">" seconds"</span><span class="p">)</span>
+                    </code></pre></div></div>
+                    <p>The output cell should show</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">There</span> <span class="n">are</span> <span class="mi">60</span> <span class="n">minutes</span> <span class="n">are</span> <span class="ow">in</span> <span class="mi">3600</span> <span class="n">seconds</span>
+                    </code></pre></div></div>
+
+                    <h3 id="functions">Functions</h3>
+
+                    <ul>
+                      <li>We will run the code below for a recursion function by typing it into the input cell and pressing the Shift+Enter keys</li>
+                    </ul>
+
+                    <p>Recursion is a common mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can loop through data to reach a result.</p>
+
+                    <p>You should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, or one that uses excess amounts of memory or processor power. However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.</p>
+
+                    <p>In this example, <code class="language-plaintext highlighter-rouge">tri_recursion()</code> is a function that we have defined to call itself (“recurse”). We use the k variable as the data, which decrements <code class="language-plaintext highlighter-rouge">(-1)</code> every time we recurse. The recursion ends when the condition is not greater than 0 .</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">tri_recursion</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+                      <span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+                        <span class="n">result</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">tri_recursion</span><span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                        <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+                      <span class="k">else</span><span class="p">:</span>
+                        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+                      <span class="k">return</span> <span class="n">result</span>
+
+                    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n\n</span><span class="s">Recursion Example Results"</span><span class="p">)</span>
+                    <span class="n">tri_recursion</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+                    </code></pre></div></div>
+                    <p>The output cell should be as below</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+                    <span class="n">Recursion</span> <span class="n">Example</span> <span class="n">Results</span>
+                    <span class="mi">1</span>
+                    <span class="mi">3</span>
+                    <span class="mi">6</span>
+                    <span class="mi">10</span>
+                    <span class="mi">15</span>
+                    <span class="mi">21</span>
+                    <span class="mi">21</span>
+                    </code></pre></div></div>
+
+                    <p>The reason why 1 is printed before the 21 is because of the stack that is formed and that puts it ontop of the rest of the numbers followed by 3 then 6 then 10 ….</p>
+
+                    <h1 id="machine-learning-intro">Machine Learning Intro</h1>
+                    <ul>
+                      <li>By now you have all the notebook basics at your finger tips. Lets dive into some machine learning using scikit-learn. I assume you have a basic working knowledge of ML practices.</li>
+                    </ul>
+
+                    <h4 id="scikit-learn">Scikit-Learn</h4>
+                    <p>Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection and evaluation, and many other utilities.</p>
+
+                    <ul>
+                      <li>
+                        <p>By default, this library is pre installed in google colab so no need to run the pip installation command.</p>
+                      </li>
+                      <li>
+                        <p>Scikit-Learn provides dozens of built-in machine learning algorithms and models, called estimators. Each estimator can be fitted to some data using its fit method.</p>
+                      </li>
+                    </ul>
+
+                    <h3 id="model-fitting">Model Fitting</h3>
+                    <p>This is an example to fit a RandomForestClassifier with some very basic data. You should try it out in a new colab notebook.
+                    Type the code below in an input cell then run it.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+                    <span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="n">X</span> <span class="o">=</span> <span class="p">[[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]]</span>  <span class="c1"># 2 samples, 3 features
+                    </span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># classes of each sample
+                    </span><span class="n">clf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+                    </code></pre></div></div>
+
+                    <p>The output cell should be:</p>
+
+                    <p><img src="colab_images/Output1.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>The fit method generally accepts 2 inputs:</p>
+
+                    <ul>
+                      <li>The samples matrix (or design matrix) <code class="language-plaintext highlighter-rouge">X</code>. The size of <code class="language-plaintext highlighter-rouge">X</code> is typically <code class="language-plaintext highlighter-rouge">(n_samples, n_features)</code>, which means that samples are represented as rows and features are represented as columns.</li>
+                      <li>The target values <code class="language-plaintext highlighter-rouge">y</code> which are real numbers for regression tasks, or integers for classification (or any other discrete set of values). For unsupervized learning tasks, <code class="language-plaintext highlighter-rouge">y</code> does not need to be specified. <code class="language-plaintext highlighter-rouge">y</code> is usually 1d array where the <code class="language-plaintext highlighter-rouge">i</code> th entry corresponds to the target of the <code class="language-plaintext highlighter-rouge">i</code> th sample (row) of <code class="language-plaintext highlighter-rouge">X</code>.</li>
+                    </ul>
+
+                    <p>Both <code class="language-plaintext highlighter-rouge">X</code> and <code class="language-plaintext highlighter-rouge">y</code> are usually expected to be numpy arrays or equivalent array-like data types, though some estimators work with other formats such as sparse matrices.</p>
+
+                    <h3 id="prediction">Prediction</h3>
+                    <p>Once the estimator is fitted, it can be used for predicting target values of new data. You don’t need to re-train the estimator:</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># predict classes of the training data
+                    </span><span class="n">clf</span><span class="p">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">]])</span>  <span class="c1"># predict classes of new data
+                    </span></code></pre></div></div>
+
+                    <h1 id="how-to-run-a-job-with-gpu">How to run a job with GPU</h1>
+
+                    <p>We will now do an example of image classification while running it on a GPU.</p>
+
+                    <p>This example shows how to classify cats or dogs from images.
+                    We shall build an image classifier using <code class="language-plaintext highlighter-rouge">tf.keras.sequential</code> model and load the data using <code class="language-plaintext highlighter-rouge">tf.keras.preprocessing.image.ImageDataGenerator</code>.
+                    The following concepts will be emphasized :</p>
+
+                    <ul>
+                      <li><em>Building data</em> into pipelines to efficiently work with data on disk to use with the model.</li>
+                      <li><em>Overfitting</em> - How to identify and prevent it.</li>
+                      <li><em>Data augmentation</em> and <em>dropout</em> - Key techniques to fight overfitting in computer vision tasks to incorporate into the data pipeline and image classifier model.</li>
+                    </ul>
+
+                    <h3 id="import-packages">Import Packages</h3>
+                    <p>Let’s start by <strong><a href="#Enabling-GPU">changing to a GPU runtime</a></strong> then importing the required packages into our colab notebook. The <code class="language-plaintext highlighter-rouge">os</code> package is used to read files and directory structure, <code class="language-plaintext highlighter-rouge">NumPy</code> is used to convert python list to numpy array and to perform required matrix operations and <code class="language-plaintext highlighter-rouge">matplotlib.pyplot</code> to plot the graph and display images in the training and validation data.
+                    Type the code below in an input cell and run it to import packages</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+                    </code></pre></div></div>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+                    <span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">MaxPooling2D</span>
+                    <span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+
+                    <span class="kn">import</span> <span class="nn">os</span>
+                    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+                    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+                    </code></pre></div></div>
+                    <h3 id="load-data">Load Data</h3>
+                    <p>Begin by downloading the dataset. This tutorial uses a filtered version of Dogs vs Cats dataset from Kaggle. Download the archive version of the dataset and store it in the “/tmp/” directory.</p>
+
+                    <p><img src="colab_images/GPUjob1.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>The dataset has the following directory structure:</p>
+
+                    <pre>
+                    <b>cats_and_dogs_filtered</b>
+                    |__ <b>train</b>
+                        |______ <b>cats</b>: [cat.0.jpg, cat.1.jpg, cat.2.jpg ....]
+                        |______ <b>dogs</b>: [dog.0.jpg, dog.1.jpg, dog.2.jpg ...]
+                    |__ <b>validation</b>
+                        |______ <b>cats</b>: [cat.2000.jpg, cat.2001.jpg, cat.2002.jpg ....]
+                        |______ <b>dogs</b>: [dog.2000.jpg, dog.2001.jpg, dog.2002.jpg ...]
+                    </pre>
+
+                    <p>After extracting its contents, assign variables with the proper file path for the training and validation set.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_dir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">PATH</span><span class="p">,</span> <span class="s">'train'</span><span class="p">)</span>
+                    <span class="n">validation_dir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">PATH</span><span class="p">,</span> <span class="s">'validation'</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_cats_dir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_dir</span><span class="p">,</span> <span class="s">'cats'</span><span class="p">)</span>  <span class="c1"># directory with our training cat pictures
+                    </span><span class="n">train_dogs_dir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_dir</span><span class="p">,</span> <span class="s">'dogs'</span><span class="p">)</span>  <span class="c1"># directory with our training dog pictures
+                    </span><span class="n">validation_cats_dir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">validation_dir</span><span class="p">,</span> <span class="s">'cats'</span><span class="p">)</span>  <span class="c1"># directory with our validation cat pictures
+                    </span><span class="n">validation_dogs_dir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">validation_dir</span><span class="p">,</span> <span class="s">'dogs'</span><span class="p">)</span>  <span class="c1"># directory with our validation dog pictures
+                    </span></code></pre></div></div>
+
+                    <h3 id="understanding-the-data">Understanding the data</h3>
+                    <p>Let’s look at how many cats and dogs images are in the training and validation directory:</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_cats_tr</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_cats_dir</span><span class="p">))</span>
+                    <span class="n">num_dogs_tr</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_dogs_dir</span><span class="p">))</span>
+
+                    <span class="n">num_cats_val</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">validation_cats_dir</span><span class="p">))</span>
+                    <span class="n">num_dogs_val</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">validation_dogs_dir</span><span class="p">))</span>
+
+                    <span class="n">total_train</span> <span class="o">=</span> <span class="n">num_cats_tr</span> <span class="o">+</span> <span class="n">num_dogs_tr</span>
+                    <span class="n">total_val</span> <span class="o">=</span> <span class="n">num_cats_val</span> <span class="o">+</span> <span class="n">num_dogs_val</span>
+                    </code></pre></div></div>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'total training cat images:'</span><span class="p">,</span> <span class="n">num_cats_tr</span><span class="p">)</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">'total training dog images:'</span><span class="p">,</span> <span class="n">num_dogs_tr</span><span class="p">)</span>
+
+                    <span class="k">print</span><span class="p">(</span><span class="s">'total validation cat images:'</span><span class="p">,</span> <span class="n">num_cats_val</span><span class="p">)</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">'total validation dog images:'</span><span class="p">,</span> <span class="n">num_dogs_val</span><span class="p">)</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">"--"</span><span class="p">)</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">"Total training images:"</span><span class="p">,</span> <span class="n">total_train</span><span class="p">)</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">"Total validation images:"</span><span class="p">,</span> <span class="n">total_val</span><span class="p">)</span>
+                    </code></pre></div></div>
+                    <p>The output cell should be as below</p>
+
+                    <p><img src="colab_images/understandingdata1.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>For convenience, set up variables to use while pre-processing the dataset and training the network.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span>
+                    <span class="n">epochs</span> <span class="o">=</span> <span class="mi">15</span>
+                    <span class="n">IMG_HEIGHT</span> <span class="o">=</span> <span class="mi">150</span>
+                    <span class="n">IMG_WIDTH</span> <span class="o">=</span> <span class="mi">150</span>
+                    </code></pre></div></div>
+
+                    <h3 id="data-preparation">Data preparation</h3>
+                    <p>Format the images into appropriately pre-processed floating point tensors before feeding to the network:</p>
+
+                    <ol>
+                      <li>Read images from the disk.</li>
+                      <li>Decode contents of these images and convert it into proper grid format as per their RGB content.</li>
+                      <li>Convert them into floating point tensors.</li>
+                      <li>Rescale the tensors from values between 0 and 255 to values between 0 and 1, as neural networks prefer to deal with small input values.</li>
+                    </ol>
+
+                    <p>Fortunately, all these tasks can be done with the <code class="language-plaintext highlighter-rouge">ImageDataGenerator</code> class provided by <code class="language-plaintext highlighter-rouge">tf.keras</code>. It can read images from disk and preprocess them into proper tensors. It will also set up generators that convert these images into batches of tensors—helpful when training the network.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_image_generator</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span> <span class="c1"># Generator for our training data
+                    </span><span class="n">validation_image_generator</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span> <span class="c1"># Generator for our validation data
+                    </span></code></pre></div></div>
+
+                    <p>After defining the generators for training and validation images, the <code class="language-plaintext highlighter-rouge">flow_from_directory</code> method load images from the disk, applies rescaling, and resizes the images into the required dimensions.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data_gen</span> <span class="o">=</span> <span class="n">train_image_generator</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span><span class="n">directory</span><span class="o">=</span><span class="n">train_dir</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">),</span><span class="n">class_mode</span><span class="o">=</span><span class="s">'binary'</span><span class="p">)</span>
+                    </code></pre></div></div>
+                    <p><img src="colab_images/found2000.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">val_data_gen</span> <span class="o">=</span> <span class="n">validation_image_generator</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+                    <span class="n">directory</span><span class="o">=</span><span class="n">validation_dir</span><span class="p">,</span><span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">),</span><span class="n">class_mode</span><span class="o">=</span><span class="s">'binary'</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <p><img src="colab_images/found1000.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="visualize-training-images">Visualize training images</h3>
+                    <p>Visualize the training images by extracting a batch of images from the training generator—which is 32 images in this example—then plot five of them with <code class="language-plaintext highlighter-rouge">matplotlib</code>.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sample_training_images</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">train_data_gen</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <p>The <code class="language-plaintext highlighter-rouge">next</code> function returns a batch from the dataset. The return value of next function is in form of <code class="language-plaintext highlighter-rouge">(x_train, y_train)</code> where <code class="language-plaintext highlighter-rouge">x_train</code> is training features and <code class="language-plaintext highlighter-rouge">y_train</code>, its labels. Discard the labels to only visualize the training images.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This function will plot images in the form of a grid with 1 row and 5 columns where images are placed in each column.
+                    </span><span class="k">def</span> <span class="nf">plotImages</span><span class="p">(</span><span class="n">images_arr</span><span class="p">):</span>
+                        <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+                        <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="p">.</span><span class="n">flatten</span><span class="p">()</span>
+                        <span class="k">for</span> <span class="n">img</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span> <span class="n">images_arr</span><span class="p">,</span> <span class="n">axes</span><span class="p">):</span>
+                            <span class="n">ax</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+                            <span class="n">ax</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
+                        <span class="n">plt</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span>
+                        <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+                    </code></pre></div></div>
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plotImages</span><span class="p">(</span><span class="n">sample_training_images</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+                    </code></pre></div></div>
+                    <p>Your output should be five different images in a row as shown below</p>
+
+                    <p><img src="colab_images/samplez.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="create-the-model">Create the model</h3>
+                    <p>The model consists of three convolution blocks with a max pool layer in each of them. There’s a fully connected layer with 512 units on top of it that is activated by a relu activation function.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
+                        <span class="n">Conv2D</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span> <span class="p">,</span><span class="mi">3</span><span class="p">)),</span>
+                        <span class="n">MaxPooling2D</span><span class="p">(),</span>
+                        <span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+                        <span class="n">MaxPooling2D</span><span class="p">(),</span>
+                        <span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+                        <span class="n">MaxPooling2D</span><span class="p">(),</span>
+                        <span class="n">Flatten</span><span class="p">(),</span>
+                        <span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+                        <span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="p">])</span>
+                    </code></pre></div></div>
+
+                    <h3 id="compile-the-model">Compile the model</h3>
+
+                    <p>For this tutorial, choose the <code class="language-plaintext highlighter-rouge">ADAM</code> optimizer and <code class="language-plaintext highlighter-rouge">binary cross entropy</code> loss function. To view training and validation accuracy for each training epoch, pass the <code class="language-plaintext highlighter-rouge">metrics</code> argument.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s">'adam'</span><span class="p">,</span>
+                                  <span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">losses</span><span class="p">.</span><span class="n">BinaryCrossentropy</span><span class="p">(</span><span class="n">from_logits</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+                                  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">])</span>
+                    </code></pre></div></div>
+                    <h3 id="model-summary">Model summary</h3>
+                    <p>View all the layers of the network using the model’s summary method:</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span><span class="p">.</span><span class="n">summary</span><span class="p">()</span>
+                    </code></pre></div></div>
+
+                    <p>The output cell should show</p>
+
+                    <p><img src="colab_images/modelsum.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="train-the-model">Train the model</h3>
+                    <p>Use the <code class="language-plaintext highlighter-rouge">fit_generator</code> method of the <code class="language-plaintext highlighter-rouge">ImageDataGenerator</code> class to train the network.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">fit_generator</span><span class="p">(</span>
+                        <span class="n">train_data_gen</span><span class="p">,</span>
+                        <span class="n">steps_per_epoch</span><span class="o">=</span><span class="n">total_train</span> <span class="o">//</span> <span class="n">batch_size</span><span class="p">,</span>
+                        <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span>
+                        <span class="n">validation_data</span><span class="o">=</span><span class="n">val_data_gen</span><span class="p">,</span>
+                        <span class="n">validation_steps</span><span class="o">=</span><span class="n">total_val</span> <span class="o">//</span> <span class="n">batch_size</span>
+                    <span class="p">)</span>
+                    </code></pre></div></div>
+                    <p>The output cell should show the outputs below.Allow it to run until it completes all the 15 epochs</p>
+
+                    <p><img src="colab_images/modelrun.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="visualize-training-results">Visualize training results</h3>
+
+                    <p>Now visualize the results after training the network by typing the code below.</p>
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">acc</span> <span class="o">=</span> <span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">]</span>
+                    <span class="n">val_acc</span> <span class="o">=</span> <span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">[</span><span class="s">'val_accuracy'</span><span class="p">]</span>
+
+                    <span class="n">loss</span><span class="o">=</span><span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">[</span><span class="s">'loss'</span><span class="p">]</span>
+                    <span class="n">val_loss</span><span class="o">=</span><span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">[</span><span class="s">'val_loss'</span><span class="p">]</span>
+
+                    <span class="n">epochs_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+
+                    <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">acc</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Training Accuracy'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">val_acc</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Validation Accuracy'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">'lower right'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Training and Validation Accuracy'</span><span class="p">)</span>
+
+                    <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">loss</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Training Loss'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">val_loss</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Validation Loss'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">'upper right'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Training and Validation Loss'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+                    </code></pre></div></div>
+
+                    <p><img src="colab_images/losscurv.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>As you can see from the plots, training accuracy and validation accuracy are off by large margin and the model has achieved only around 70% accuracy on the validation set.</p>
+
+                    <p>Let’s look at what went wrong and try to increase overall performance of the model.</p>
+
+                    <h3 id="overfitting">Overfitting</h3>
+
+                    <p>In the plots above, the training accuracy is increasing linearly over time, whereas validation accuracy stalls around 70% in the training process. Also, the difference in accuracy between training and validation accuracy is noticeable—a sign of <em>overfitting</em>.</p>
+
+                    <p>When there are a small number of training examples, the model sometimes learns from noises or unwanted details from training examples—to an extent that it negatively impacts the performance of the model on new examples. This phenomenon is known as overfitting. It means that the model will have a difficult time generalizing on a new dataset.</p>
+
+                    <p>There are multiple ways to fight overfitting in the training process. In this tutorial, you’ll use <em>data augmentation</em> and add <em>dropout</em> to our model.</p>
+
+                    <h3 id="data-augmentation">Data augmentation</h3>
+
+                    <p>Overfitting generally occurs when there are a small number of training examples. One way to fix this problem is to augment the dataset so that it has a sufficient number of training examples. Data augmentation takes the approach of generating more training data from existing training samples by augmenting the samples using random transformations that yield believable-looking images. The goal is the model will never see the exact same picture twice during training. This helps expose the model to more aspects of the data and generalize better.</p>
+
+                    <p>Implement this in <code class="language-plaintext highlighter-rouge">tf.keras</code> using the <code class="language-plaintext highlighter-rouge">ImageDataGenerator</code> class. Pass  different transformations to the dataset and it will take care of applying it during the training process.</p>
+
+                    <h3 id="augment-and-visualize-data">Augment and visualize Data</h3>
+
+                    <p>Begin by applying random horizontal flip augmentation to the dataset and see how individual images look like after the transformation.</p>
+
+                    <h3 id="apply-horizontal-flip">Apply Horizontal Flip</h3>
+
+                    <p>Pass <code class="language-plaintext highlighter-rouge">horizontal_flip</code> as an argument to the <code class="language-plaintext highlighter-rouge">ImageDataGenerator</code> class and set it to <code class="language-plaintext highlighter-rouge">True</code> to apply this augmentation.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image_gen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">horizontal_flip</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data_gen</span> <span class="o">=</span> <span class="n">image_gen</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span><span class="n">directory</span><span class="o">=</span><span class="n">train_dir</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">))</span>
+                    </code></pre></div></div>
+
+                    <p><img src="colab_images/foundanotha2000.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Take one sample image from the training examples and repeat it five times so that the augmentation is applied to the same image five times.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">augmented_images</span> <span class="o">=</span> <span class="p">[</span><span class="n">train_data_gen</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+                    </code></pre></div></div>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Re-use the same custom plotting function defined and used
+                    # above to visualize the training images
+                    </span><span class="n">plotImages</span><span class="p">(</span><span class="n">augmented_images</span><span class="p">)</span>
+                    </code></pre></div></div>
+                    <p><img src="colab_images/reuse1.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="randomly-rotate-the-image">Randomly rotate the image</h3>
+
+                    <p>Let’s take a look at a different augmentation called rotation and apply 45 degrees of rotation randomly to the training examples.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image_gen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">rotation_range</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data_gen</span> <span class="o">=</span> <span class="n">image_gen</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span><span class="n">directory</span><span class="o">=</span><span class="n">train_dir</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">))</span>
+
+                    <span class="n">augmented_images</span> <span class="o">=</span> <span class="p">[</span><span class="n">train_data_gen</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+                    </code></pre></div></div>
+
+                    <p><img src="colab_images/foundanotha2000.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plotImages</span><span class="p">(</span><span class="n">augmented_images</span><span class="p">)</span>
+                    </code></pre></div></div>
+                    <p><img src="colab_images/catsagain.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="apply-zoom-augmentation">Apply Zoom Augmentation</h3>
+                    <p>Apply a zoom augmentation to the dataset to zoom images up to 50% randomly.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># zoom_range from 0 - 1 where 1 = 100%.
+                    </span><span class="n">image_gen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1">#
+                    </span></code></pre></div></div>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data_gen</span> <span class="o">=</span> <span class="n">image_gen</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span><span class="n">directory</span><span class="o">=</span><span class="n">train_dir</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">))</span>
+
+                    <span class="n">augmented_images</span> <span class="o">=</span> <span class="p">[</span><span class="n">train_data_gen</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+                    </code></pre></div></div>
+                    <p><img src="colab_images/foundanotha2000.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plotImages</span><span class="p">(</span><span class="n">augmented_images</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <p><img src="colab_images/cats222.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="putting-it-all-together">Putting it all together</h3>
+
+                    <p>Apply all the previous augmentations. Here, you applied rescale, 45 degree rotation, width shift, height shift, horizontal flip and zoom augmentation to the training images.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image_gen_train</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+                                        <span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span>
+                                        <span class="n">rotation_range</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+                                        <span class="n">width_shift_range</span><span class="o">=</span><span class="p">.</span><span class="mi">15</span><span class="p">,</span>
+                                        <span class="n">height_shift_range</span><span class="o">=</span><span class="p">.</span><span class="mi">15</span><span class="p">,</span>
+                                        <span class="n">horizontal_flip</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                        <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.5</span>
+                                        <span class="p">)</span>
+                    </code></pre></div></div>
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data_gen</span> <span class="o">=</span> <span class="n">image_gen_train</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+                                                                         <span class="n">directory</span><span class="o">=</span><span class="n">train_dir</span><span class="p">,</span>
+                                                                         <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                                                         <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">),</span>
+                                                                         <span class="n">class_mode</span><span class="o">=</span><span class="s">'binary'</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <p><img src="colab_images/foundanotha2000.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <p>Visualize how a single image would look five different times when passing these augmentations randomly to the dataset.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">augmented_images</span> <span class="o">=</span> <span class="p">[</span><span class="n">train_data_gen</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+                    <span class="n">plotImages</span><span class="p">(</span><span class="n">augmented_images</span><span class="p">)</span>
+                    </code></pre></div></div>
+                    <p><img src="colab_images/resumed.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="create-validation-data-generator">Create validation data generator</h3>
+
+                    <p>Generally, only apply data augmentation to the training examples. In this case, only rescale the validation images and convert them into batches using <code class="language-plaintext highlighter-rouge">ImageDataGenerator</code>.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image_gen_val</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+                    </code></pre></div></div>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">val_data_gen</span> <span class="o">=</span> <span class="n">image_gen_val</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+                                                                     <span class="n">directory</span><span class="o">=</span><span class="n">validation_dir</span><span class="p">,</span>
+                                                                     <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">),</span>
+                                                                     <span class="n">class_mode</span><span class="o">=</span><span class="s">'binary'</span><span class="p">)</span>
+                    </code></pre></div></div>
+                    <p><img src="colab_images/found1000ag.PNG" alt="Test Image" title="Test Title" /></p>
+                    <h2 id="dropout">Dropout</h2>
+
+                    <p>Another technique to reduce overfitting is to introduce <em>dropout</em> to the network. It is a form of <em>regularization</em> that forces the weights in the network to take only small values, which makes the distribution of weight values more regular and the network can reduce overfitting on small training examples. Dropout is one of the regularization technique used in this tutorial</p>
+
+                    <p>When you apply dropout to a layer it randomly drops out (set to zero) number of output units from the applied layer during the training process. Dropout takes a fractional number as its input value, in the form such as 0.1, 0.2, 0.4, etc. This means dropping out 10%, 20% or 40% of the output units randomly from the applied layer.</p>
+
+                    <p>When appling 0.1 dropout to a certain layer, it randomly kills 10% of the output units in each training epoch.</p>
+
+                    <p>Create a network architecture with this new dropout feature and apply it to different convolutions and fully-connected layers.</p>
+
+                    <h2 id="creating-a-new-network-with-dropouts">Creating a new network with Dropouts</h2>
+
+                    <p>Here, you apply dropout to first and last max pool layers. Applying dropout will randomly set 20% of the neurons to zero during each training epoch. This helps to avoid overfitting on the training dataset.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model_new</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
+                        <span class="n">Conv2D</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span>
+                               <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span> <span class="p">,</span><span class="mi">3</span><span class="p">)),</span>
+                        <span class="n">MaxPooling2D</span><span class="p">(),</span>
+                        <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span>
+                        <span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+                        <span class="n">MaxPooling2D</span><span class="p">(),</span>
+                        <span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+                        <span class="n">MaxPooling2D</span><span class="p">(),</span>
+                        <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span>
+                        <span class="n">Flatten</span><span class="p">(),</span>
+                        <span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+                        <span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="p">])</span>
+                    </code></pre></div></div>
+
+                    <h3 id="compile-the-model-1">Compile the model</h3>
+
+                    <p>After introducing dropouts to the network, compile the model and view the layers summary.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model_new</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s">'adam'</span><span class="p">,</span>
+                                      <span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">losses</span><span class="p">.</span><span class="n">BinaryCrossentropy</span><span class="p">(</span><span class="n">from_logits</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+                                      <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">])</span>
+
+                    <span class="n">model_new</span><span class="p">.</span><span class="n">summary</span><span class="p">()</span>
+                    </code></pre></div></div>
+
+                    <p><img src="colab_images/summary2.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="train-the-model-1">Train the model</h3>
+
+                    <p>After successfully introducing data augmentations to the training examples and adding dropouts to the network, train this new network:</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">history</span> <span class="o">=</span> <span class="n">model_new</span><span class="p">.</span><span class="n">fit_generator</span><span class="p">(</span>
+                        <span class="n">train_data_gen</span><span class="p">,</span>
+                        <span class="n">steps_per_epoch</span><span class="o">=</span><span class="n">total_train</span> <span class="o">//</span> <span class="n">batch_size</span><span class="p">,</span>
+                        <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span>
+                        <span class="n">validation_data</span><span class="o">=</span><span class="n">val_data_gen</span><span class="p">,</span>
+                        <span class="n">validation_steps</span><span class="o">=</span><span class="n">total_val</span> <span class="o">//</span> <span class="n">batch_size</span>
+                    <span class="p">)</span>
+                    </code></pre></div></div>
+                    <p><img src="colab_images/sssu.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <h3 id="visualize-the-model">Visualize the model</h3>
+
+                    <p>Visualize the new model after training, you can see that there is significantly less overfitting than before. The accuracy should go up after training the model for more epochs.</p>
+
+                    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">acc</span> <span class="o">=</span> <span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">]</span>
+                    <span class="n">val_acc</span> <span class="o">=</span> <span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">[</span><span class="s">'val_accuracy'</span><span class="p">]</span>
+
+                    <span class="n">loss</span> <span class="o">=</span> <span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">[</span><span class="s">'loss'</span><span class="p">]</span>
+                    <span class="n">val_loss</span> <span class="o">=</span> <span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">[</span><span class="s">'val_loss'</span><span class="p">]</span>
+
+                    <span class="n">epochs_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+
+                    <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">acc</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Training Accuracy'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">val_acc</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Validation Accuracy'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">'lower right'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Training and Validation Accuracy'</span><span class="p">)</span>
+
+                    <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">loss</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Training Loss'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">val_loss</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Validation Loss'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">'upper right'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Training and Validation Loss'</span><span class="p">)</span>
+                    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+                    </code></pre></div></div>
+                    <p><img src="colab_images/grap1.PNG" alt="Test Image" title="Test Title" /></p>
+
+                    <hr />
+                    <h2 id="author-details">Author Details</h2>
+                    <p>Am a senior student of <a href="https://www.mak.ac.ug/">Makerere University</a> pursuing a Bachelor of Science degree in Telecommunications Engineering at the <a href="https://cedat.mak.ac.ug/">College of Engineering ,Design, Art and Technology</a>.</p>
+
+                    <h2 id="links-to-above-ipython-notebook-tutorials">Links to above ipython notebook tutorials</h2>
+
+                    <p><a href="https://colab.research.google.com/drive/1zO7_uiTQ40lcxuv4OtaOe3vtKgoXYW0-">MyFirstNotebook</a> : <a href="https://colab.research.google.com/drive/1zO7_uiTQ40lcxuv4OtaOe3vtKgoXYW0-">https://colab.research.google.com/drive/1zO7_uiTQ40lcxuv4OtaOe3vtKgoXYW0-</a></p>
+
+                    <p><a href="https://colab.research.google.com/drive/12KXXvzdV_2GSmqvwVoZPqSlVHOVe9Hpe?usp=sharing">ML Intro</a>: <a href="https://colab.research.google.com/drive/12KXXvzdV_2GSmqvwVoZPqSlVHOVe9Hpe?usp=sharing">https://colab.research.google.com/drive/12KXXvzdV_2GSmqvwVoZPqSlVHOVe9Hpe?usp=sharing</a></p>
+
+                    <p><a href="https://colab.research.google.com/drive/1m0VNPN5rg-l23y3zVk6vlQj9cbgDy1SH?usp=sharing">Image Classifier</a> : <a href="https://colab.research.google.com/drive/1m0VNPN5rg-l23y3zVk6vlQj9cbgDy1SH?usp=sharing">https://colab.research.google.com/drive/1m0VNPN5rg-l23y3zVk6vlQj9cbgDy1SH?usp=sharing</a></p>
+
+                    <h2 id="github-repo">Github Repo</h2>
+
+                    <p>You can checkout this page’s repository on Github by  clicking the link below.</p>
+
+                    <p>👉 <a href="https://github.com/KakoozaJerry/getting_started_with_colab">https://github.com/KakoozaJerry/getting_started_with_colab</a></p>
+
+                    <hr />
+                    <h2 id="contact-me">Contact Me</h2>
+
+                    <p>If you have any questions about this guide , do not hesitate to contact me on whichever platform you prefer below :) 👇</p>
+
+                    <p>Email📧 : <a href="mailto:abrahamkakooza@gmail.com">abrahamkakooza@gmail.com</a></p>
+
+                    <p>Twitter🐤 : <a href="https://twitter.com/KakoozaJerry">@KakoozaJerry</a></p>
+
+                    <p>Facebook😉 : <a href="https://www.facebook.com/kakooza.jerry">@KakoozaJerry</a></p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Our Partners -->
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-12"><h3>Our Partners</h3></div>
+                <div class="col-12 partners padding">
+                    <a href="#"><img src="images/mes.jpg" width="200px" class="img-fluid"></a>
+                    <a href="#"><img src="images/netlabs.png" width="200px" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container-fluid padding">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h5>Contact Us</h5>
+                        <hr class="light-100">
+                        <p>Tel: 0781-873556</p>
+                        <p>Tel: 0701-193061</p>
+                        <p>Email: makmlclub@gmail.com</p>
+                    </div>
+
+                    <div class="col-12">
+                        <hr class="light-100">
+                        <a href="index.html"><h5>&copy; makmlclub.github.io</h5></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!-- From Colab -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+        <script>anchors.add();</script>
+        <!-- From Colab -->
+    </body>
+</html>
