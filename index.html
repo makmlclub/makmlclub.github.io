@@ -24,31 +24,39 @@
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li>
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tutorials.html">Tutorials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="leadership.html">Leadership</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="events.html">Events</a>
-                </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="tutorials.html">Tutorials</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="leadership.html">Leadership</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="events.html">Events</a>
+              </li>
             </ul>
+            <a class="navbar-brand" href="index.html"><img src="images/muk_logo.png" width="60px" height="auto"></a>
         </div>
-        <a class="navbar-brand" href="index.html"><img src="images/muk_logo.png" width="60px" height="auto"></a>
       </div>
     </nav>
 
+    <!-- Landing section-->
+    <div class="landing-image">
+      <img src="images/backg.png">
+      <div class="carousel-caption">
+        <h1 class="display-2">Machine Learning Club</h1>
+        <h3 class="display-4">Makerere University</h3>
+        <a href="tutorials.html"><button type="button" class="btn btn-outline-light btn-lg">Tutorials</button></a>
+        <a href="https://forms.gle/fwYPhbCp3dtF8Jk49">
+            <button type="button" class="btn btn-primary btn-lg">Register Now</button>
+        </a>
+      </div>
+    </div>
+
     <!-- Image Slider -->
-    <div id="slides" class="carousel slide" data-ride="carousel">
-        <!--
-        <ul class="carousel-indicators">
-            <li data-target="#slides" data-slide-to="0" class="active"></li>
-        </ul>
-        -->
+    <!-- <div id="slides" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="images/backg.png" width="100%" height="100%">
@@ -62,10 +70,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Welcome Section -->
-    <div class="container-fluid padding">
+    <div class="container-fluid">
         <div class="row welcome text-center">
             <div class="col-12">
                 <h1 class="display-4">Who are we?</h1>
@@ -84,9 +92,9 @@
         </div>
     </div>
 
-    <!-- Three Column Section -->
+    <!-- Two Column Section -->
     <div class="container-fluid padding">
-        <div class="row text-center welcome padding">
+        <div class="row welcome text-center">
             <div class="col-xs-12 col-sm-6">
                 <h5>VISION</h5>
                 <p>To become the leading Machine Learning Club in Uganda.</p>
@@ -99,7 +107,7 @@
     </div>
 
     <!-- What we do -->
-    <div class="container-fluid padding">
+    <div class="container-fluid">
         <div class="row welcome text-center">
             <div class="col-12">
                 <h1 class="display-4">Our Activities</h1>
@@ -122,23 +130,27 @@
                 <p>About new developments in machine learning.</p>
             </div>
         </div>
-        <div class="alert alert-success" role="alert">
-            <div class="row">
-                <div class="col-md-9 col-lg-10">
-                    <p class="text-center"><em>Note:</em> If you are interested in joining the Machine Learning Club - Makerere University. Click the button to register.
-                    Registration is <em>FREE!</em></p>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-2 text-center">
-                    <a href="https://forms.gle/fwYPhbCp3dtF8Jk49" class="alert-link">
-                        <button type="button" class="btn btn-primary btn-md">Register Now</button>
-                    </a>
-                </div>
-            </div>
-        </div>
         <hr class="my-4">
     </div>
 
-    <!-- Photo Gallery -->
+    <!-- Alert -->
+    <div class="alert alert-success" role="alert">
+      <div class="row">
+        <div class="col-md-9 col-lg-10">
+          <p class="text-center"><em>Note:</em> If you are interested in joining the Machine Learning Club - Makerere University. Click the button to register.
+            Registration is <em>FREE!</em></p>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 text-center">
+            <a href="https://forms.gle/fwYPhbCp3dtF8Jk49" class="alert-link">
+              <button type="button" class="btn btn-primary btn-md">Register Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+    <!-- Photo Gallery - Image Slider -->
     <div id="gallery" class="container-fluid">
         <h3>Photo Gallery - CEDAT Open Day</h3>
         <br>
@@ -173,15 +185,15 @@
         <div class="row text-center padding">
             <div class="col-12"><h3>Our Partners</h3></div>
             <div class="col-12 partners padding">
-                <a href="#"><img src="images/mes.jpg" width="200px" class="img-fluid"></a>
-                <a href="#"><img src="images/netlabs.png" width="200px" class="img-fluid"></a>
+                <a href="#"><img src="images/mes.jpg" width="200px"></a>
+                <a href="#"><img src="images/netlabs.png" width="200px"></a>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container-fluid padding">
+        <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-md-12">
                     <h5>Contact Us</h5>
