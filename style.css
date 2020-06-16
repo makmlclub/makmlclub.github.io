@@ -154,8 +154,38 @@ hr.light-100{
         font-size: 1em;
         padding: .7rem;
    }
-
 }
+@media (max-width: 500px) {
+  .carousel-caption {
+    top: 40%;
+  }
+  .carousel-caption h1 {
+      font-size: 250%;
+  }
+  .carousel-caption h3 {
+    font-size: 120%;
+  }
+  .carousel-caption .btn {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  .carousel-caption {
+    top: 30%;
+  }
+  .carousel-caption h1 {
+      font-size: 180%;
+  }
+  .carousel-caption h3 {
+    font-size: 150%;
+  }
+  .carousel-caption .btn {
+    font-size: 80%;
+  }
+}
+
+
 
 
 /*---Firefox Bug Fix --*/
@@ -172,7 +202,6 @@ hr.light-100{
 [class*="col-"] {
     padding: 1rem;
 }
-
 
 
 
