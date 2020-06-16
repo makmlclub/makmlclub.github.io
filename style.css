@@ -87,9 +87,6 @@ hr.light-100{
 }
 
 @media (max-width: 768px) {
-  .carousel-inner img {
-    /* height: 50vh; */
-   }
     .carousel-caption {
         top: 45%;
     }
@@ -147,9 +144,6 @@ hr.light-100{
    }
 }
 @media (max-width: 500px) {
-  .carousel-inner img {
-    height: 55vh;
-   }
   .carousel-caption {
     top: 40%;
   }
@@ -166,7 +160,7 @@ hr.light-100{
 
 @media (max-width: 420px) {
   .carousel-caption {
-    top: 40%;
+    top: 30%;
   }
   .carousel-caption h1 {
       font-size: 180%;
