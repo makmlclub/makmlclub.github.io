@@ -3,6 +3,9 @@ html, body {
     width:  100%;
     color: #222;
 }
+.display-4 {
+  font-size: 2rem;
+}
 .navbar {
     padding: .8rem;
 }
@@ -149,6 +152,9 @@ footer {
   .btn {
     font-size: 100%;
   }
+  .display-4 {
+    font-size: 250%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -161,17 +167,23 @@ footer {
   .btn {
     font-size: 110%;
   }
+  .display-4 {
+    font-size: 300%;
+  }
 }
 
 @media (min-width: 992px) {
   .caption h1 {
-    font-size: 350%;
+    font-size: 300%;
   }
   .caption h3 {
     font-size: 250%;
   }
   .btn {
     font-size: 120%;
+  }
+  .display-4 {
+    font-size: 320%;
   }
 }
 
