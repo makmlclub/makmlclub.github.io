@@ -116,6 +116,13 @@ hr.light-100{
     margin-top: .3rem;
     margin-bottom: 1rem;
 }
+
+.card img {
+  max-width: 100%;
+}
+.card-body {
+  background: #f8f9fa;
+}
 .partners {
   width: 75%;
   max-width: 500px;
