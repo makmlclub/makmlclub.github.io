@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tutorials</title>
+    <!-- <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,19 +14,19 @@
 <body>
 
     <!-- NAVIGATION  -->
-    <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color: #e3f2fd">
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="images/ml_logo2.jpg" width="190px" height="49px"></a>
+        <a class="navbar-brand" href="index.html"><img src="images/ml_logo.jpg" width="190px" height="49px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="tutorials.html">Tutorials</a>
             </li>
             <li class="nav-item">
@@ -111,27 +112,44 @@
     </div>
     -->
 
-
-    <!-- Colab -->
+    <!--  Cards  -->
     <div class="container-fluid">
-        <div class="jumbotron">
-            <div class="col-lg-12">
-                <h4>Getting started with Colab.</h4>
-                <br>
-                <p>Colab is a free notebook environment that runs entirely in the cloud. You and team members can edit documents the way you work with Google docs. It supports many popular Machine Learning(ML) libraries such as Keras,Tensorflow,Pytorch etc.</p>
-                <br>
-                <h5>Why Colab?</h5>
-                <p>It allows one to write and execute Python in a browser with:</p>
-                <ul>
-                    <li>Zero configuration required.</li>
-                    <li>Free access to GPUs.</li>
-                    <li>Easy sharing.</li>
-                </ul>
-                <br>
-                <p>One can leverage free Graphics Processing Units(GPUs) for machine, scientific computing and 3D visualizations. Scientists, Artists and Engineers need access to massively parallel computational power. Deep learning, physical simulation or molecular modelling are accelerated with several GPU types such as NVIDIA Tesla K80, P100, P4, T4 and V100 available depending on compute or visualization needs.</p>
-                <a href="colab.html" class="btn btn-info" role="button" aria-pressed="true">Learn More</a>
+      <div class="row padding">
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card text-center">
+            <img class="card-img-top" src="images/backg.png">
+            <div class="card-body">
+              <h4 class="card-title">Pandas</h4>
+              <p class="card-text">Used to import datasets</p>
+              <a href="pandas.html" class="btn btn-info" role="button" aria-pressed="true">Learn More</a>
             </div>
+          </div>
         </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card text-center">
+            <img class="card-img-top" src="images/backg.png">
+            <div class="card-body">
+              <h4 class="card-title">Matplotlib</h4>
+              <p class="card-text">Used to visualize data</p>
+              <a href="matplotlib.html" class="btn btn-info" role="button" aria-pressed="true">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card text-center">
+            <img class="card-img-top" src="images/backg.png">
+            <div class="card-body">
+              <h4 class="card-title">Colab</h4>
+              <p class="card-text">Free environment</p>
+              <a href="colab.html" class="btn btn-info" role="button" aria-pressed="true">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <!-- Our Partners -->
