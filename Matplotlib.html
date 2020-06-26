@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Matplotlib</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -9129,15 +9130,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12520,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13034,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13376,7 +13377,7 @@ div#notebook {
 
 <span class="n">plt</span><span class="o">.</span><span class="n">stackplot</span><span class="p">(</span>
     <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sleeping&#39;</span><span class="p">],</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;eating&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;working&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;playing&#39;</span><span class="p">],</span> 
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;eating&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;working&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;playing&#39;</span><span class="p">],</span>
     <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Sleeping&#39;</span><span class="p">,</span> <span class="s1">&#39;Eating&#39;</span><span class="p">,</span> <span class="s1">&#39;Working&#39;</span><span class="p">,</span> <span class="s1">&#39;Playing&#39;</span><span class="p">]</span>    <span class="c1"># The labels help us show the legend on the stack plot</span>
 <span class="p">)</span>
 
@@ -13445,15 +13446,15 @@ div#notebook {
 
 <span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>   <span class="c1"># This sets the x values to the values of day 3</span>
-    
+
     <span class="n">labels</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>  <span class="c1"># This sets the column headers as the labels of the pie chart</span>
-    
+
     <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>   <span class="c1"># This sets the pie chart to start at angle 90. But it is optional.</span>
-    
+
     <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>   <span class="c1"># This creates a shadow around the slices of the pie chart. But it is optional.</span>
-    
+
     <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>  <span class="c1"># This splits all the slices to become individual. But it is optional.</span>
-    
+
     <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span>    <span class="c1"># This adds the percentages in the slices.</span>
 <span class="p">)</span>
 
@@ -13778,7 +13779,7 @@ div#notebook {
   </div>
 </body>
 
- 
+
 
 
 </html>
